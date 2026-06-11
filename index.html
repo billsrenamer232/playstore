@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vdesi – Social & Chat App - Apps on Google Play</title>
+  <meta name="description" content="vdesi – the ultimate social networking and chat app. Connect with friends, share moments, and chat in real-time. Free download on Google Play." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER / TOPBAR ========== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-left">
+      <div class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+      <a href="#" class="play-logo" aria-label="Google Play">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="28" height="28">
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00c6ff"/>
+              <stop offset="100%" stop-color="#0072ff"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f7971e"/>
+              <stop offset="100%" stop-color="#ffd200"/>
+            </linearGradient>
+            <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ee0979"/>
+              <stop offset="100%" stop-color="#ff6a00"/>
+            </linearGradient>
+            <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#56ab2f"/>
+              <stop offset="100%" stop-color="#a8e063"/>
+            </linearGradient>
+          </defs>
+          <polygon fill="url(#g4)" points="48,16 48,256 264,256"/>
+          <polygon fill="url(#g3)" points="48,256 48,496 264,256"/>
+          <polygon fill="url(#g2)" points="264,256 464,140 336,64"/>
+          <polygon fill="url(#g1)" points="264,256 464,372 336,448"/>
+        </svg>
+        <span class="play-text">Google Play</span>
+      </a>
+    </div>
+
+    <div class="search-bar" id="searchBar">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+      </svg>
+      <input type="text" placeholder="Search apps & games" id="searchInput" aria-label="Search apps and games" />
+    </div>
+
+    <div class="topbar-right">
+      <button class="icon-btn" aria-label="Help">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+      </button>
+      <div class="avatar" aria-label="Account" id="avatarBtn">M</div>
+    </div>
+  </header>
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <a href="#" class="sidebar-item active">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        Home
+      </a>
+      <a href="#" class="sidebar-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+        Top Charts
+      </a>
+      <a href="#" class="sidebar-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.33C18 2.53 15.47 1 13 1c-1.7 0-3.24.98-4 2.5C8.24 1.98 6.7 1 5 1 2.53 1 0 2.53 0 4.67c0 .45.11.89.18 1.33H-1v2h22V6zM5 4.67c0-.73.93-1.67 2-1.67s2 .94 2 1.67v.33H5v-.33zM13 3c1.07 0 2 .94 2 1.67v.33h-4v-.33c0-.73.93-1.67 2-1.67zM2 20h20V9H2v11zm2-9h16v7H4v-7z"/></svg>
+        Categories
+      </a>
+      <a href="#" class="sidebar-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        Kids
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="#" class="sidebar-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        My Apps
+      </a>
+      <a href="#" class="sidebar-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 7l-7.59 7.59-3.59-3.59-1.41 1.41 5 5 9-9z"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.57 0 3.04.4 4.33 1.1l1.45-1.45A10.94 10.94 0 0 0 12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10h-2z"/></svg>
+        Wishlist
+      </a>
+      <a href="#" class="sidebar-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        Redeem
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="#">Home</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <a href="#">Social</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>vdesi</span>
+    </nav>
+
+    <!-- APP HERO SECTION -->
+    <section class="app-hero" id="appHero">
+      <div class="app-hero-left">
+        <img src="app_icon.jpeg" alt="vdesi App Icon" class="app-icon" id="appIcon" />
+      </div>
+
+      <div class="app-hero-info">
+        <h1 class="app-name">vdesi – Social &amp; Chat</h1>
+        <a href="#" class="dev-name">PixelForge Labs</a>
+
+        <div class="app-badges">
+          <span class="badge badge-rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="#1a73e8"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            4.7★
+          </span>
+          <span class="badge">50M+ downloads</span>
+          <span class="badge">Rated for 13+</span>
+        </div>
+
+        <div class="app-meta-row">
+          <div class="meta-item">
+            <span class="meta-value">4.7</span>
+            <div class="meta-stars">★★★★★</div>
+            <span class="meta-label">218K reviews</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-value">50M+</span>
+            <span class="meta-label">Downloads</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <div class="content-rating-icon">
+              <span>13+</span>
+            </div>
+            <span class="meta-label">Rated for 13+</span>
+          </div>
+        </div>
+
+        <!-- INSTALL BUTTONS -->
+        <div class="install-actions">
+          <a href="Vdesi.apk" download="Vdesi.apk" class="btn-install" id="installBtn">
+            Install
+          </a>
+          <button class="btn-wishlist" id="wishlistBtn" aria-label="Add to wishlist">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </button>
+          <button class="btn-share" id="shareBtn" aria-label="Share">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+          </button>
+        </div>
+
+        <p class="install-note">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          This app is compatible with your device
+        </p>
+      </div>
+    </section>
+
+    <!-- EDITOR'S CHOICE BANNER -->
+    <div class="editors-choice-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#1a73e8"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      <div>
+        <strong>Editor's Choice</strong>
+        <span>Hand-picked by Google Play editors</span>
+      </div>
+    </div>
+
+    <!-- SCREENSHOTS CAROUSEL -->
+    <section class="screenshots-section">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshots-wrapper">
+        <button class="scroll-btn scroll-left" id="scrollLeft" aria-label="Scroll left">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+        </button>
+        <div class="screenshots-track" id="screenshotsTrack">
+          <div class="screenshot-item">
+            <img src="photo_6104804895098605231_y.jpg" alt="App Screenshot 1" loading="lazy" />
+          </div>
+          <div class="screenshot-item">
+            <img src="photo_6104804895098605233_y.jpg" alt="App Screenshot 2" loading="lazy" />
+          </div>
+          <div class="screenshot-item">
+            <img src="photo_6104804895098605234_y.jpg" alt="App Screenshot 3" loading="lazy" />
+          </div>
+          <div class="screenshot-item">
+            <img src="photo_6104804895098605235_y.jpg" alt="App Screenshot 4" loading="lazy" />
+          </div>
+        </div>
+        <button class="scroll-btn scroll-right" id="scrollRight" aria-label="Scroll right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <div class="tabs-bar" id="tabsBar">
+      <button class="tab-btn active" data-tab="about" id="tabAbout">About this app</button>
+      <button class="tab-btn" data-tab="ratings" id="tabRatings">Ratings &amp; reviews</button>
+      <button class="tab-btn" data-tab="datainfo" id="tabData">Data safety</button>
+    </div>
+
+    <!-- ABOUT TAB -->
+    <section class="tab-content" id="tab-about">
+      <div class="about-section">
+        <p class="about-text" id="aboutTextShort">
+          vdesi is the all-in-one social platform that brings your world closer. 
+          Share photos, videos, and stories with friends. Chat in real-time with powerful 
+          messaging features including voice notes, reactions, and disappearing messages...
+          <button class="read-more-btn" id="readMoreBtn">more</button>
+        </p>
+        <div class="about-text-full hidden" id="aboutTextFull">
+          <p>
+            vdesi is the all-in-one social platform that brings your world closer. 
+            Share photos, videos, and stories with friends. Chat in real-time with powerful 
+            messaging features including voice notes, reactions, and disappearing messages.
+          </p>
+          <p>
+            <strong>KEY FEATURES:</strong><br/>
+            🔥 Live Stories – Share your day with 24-hour stories<br/>
+            💬 Real-time Chat – Instant messaging with read receipts<br/>
+            🎵 Music & Reels – Short video content powered by AI<br/>
+            🔒 End-to-End Encryption – Your privacy is our priority<br/>
+            🌍 Global Community – Connect with 50M+ users worldwide<br/>
+            📸 Smart Camera – Filters, effects, and AR features<br/>
+            🎮 Games – Play mini-games with your friends
+          </p>
+          <p>
+            <strong>WHAT'S NEW IN v5.2:</strong><br/>
+            • New AI-powered photo enhancement<br/>
+            • Group video calls up to 50 participants<br/>
+            • Dark mode improvements<br/>
+            • Bug fixes and performance improvements
+          </p>
+          <button class="read-less-btn" id="readLessBtn">less</button>
+        </div>
+
+        <div class="app-tags">
+          <span class="tag">Social networking</span>
+          <span class="tag">Chat</span>
+          <span class="tag">Photo sharing</span>
+          <span class="tag">Video</span>
+          <span class="tag">Stories</span>
+        </div>
+
+        <!-- APP DETAILS -->
+        <div class="details-grid">
+          <div class="detail-row">
+            <span class="detail-label">Updated on</span>
+            <span class="detail-value">Jun 10, 2026</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Size</span>
+            <span class="detail-value">82 MB</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Current Version</span>
+            <span class="detail-value">5.2.1</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Requires Android</span>
+            <span class="detail-value">8.0 and up</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Downloads</span>
+            <span class="detail-value">50,000,000+</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Content rating</span>
+            <span class="detail-value">Rated for 13+ <a href="#" class="learn-more">Learn more</a></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Developer</span>
+            <span class="detail-value"><a href="#" class="learn-more">PixelForge Labs</a></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Released on</span>
+            <span class="detail-value">March 14, 2020</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RATINGS TAB -->
+    <section class="tab-content hidden" id="tab-ratings">
+      <div class="ratings-section">
+        <div class="ratings-overview">
+          <div class="rating-big">
+            <span class="rating-number">4.7</span>
+            <div class="rating-stars-big">★★★★★</div>
+            <span class="rating-count">218K reviews</span>
+          </div>
+          <div class="rating-bars">
+            <div class="bar-row">
+              <span>5</span>
+              <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+              <span>72%</span>
+            </div>
+            <div class="bar-row">
+              <span>4</span>
+              <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+              <span>16%</span>
+            </div>
+            <div class="bar-row">
+              <span>3</span>
+              <div class="bar-track"><div class="bar-fill" style="width:7%"></div></div>
+              <span>7%</span>
+            </div>
+            <div class="bar-row">
+              <span>2</span>
+              <div class="bar-track"><div class="bar-fill" style="width:3%"></div></div>
+              <span>3%</span>
+            </div>
+            <div class="bar-row">
+              <span>1</span>
+              <div class="bar-track"><div class="bar-fill" style="width:2%"></div></div>
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- REVIEWS -->
+        <div class="reviews-list">
+
+          <div class="review-card" id="review1">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#1a73e8">A</div>
+              <div>
+                <span class="reviewer-name">Aarav Sharma</span>
+                <span class="review-date">May 10, 2026</span>
+              </div>
+              <button class="review-menu" aria-label="Review options">⋮</button>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">The video feeds are exactly what I wanted! Crisp HD quality with ultra-smooth buffering — no interruptions at all. The creator channels are brilliant and the content library keeps growing every week. vdesi is hands down the best streaming app I've used!</p>
+            <div class="review-helpful">
+              <span>1,240 people found this review helpful</span>
+              <div class="helpful-btns">
+                <button id="helpful1">👍 Yes</button>
+                <button id="helpful2">👎 No</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card" id="review2">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#e91e8c">P</div>
+              <div>
+                <span class="reviewer-name">Priya Patel</span>
+                <span class="review-date">May 8, 2026</span>
+              </div>
+              <button class="review-menu" aria-label="Review options">⋮</button>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Super intuitive design! Exploring different categories makes navigation a total breeze. Videos load perfectly even on cellular networks — no buffering, no lag. The regional content selection is amazing. Absolutely five stars, couldn't be happier!</p>
+            <div class="review-helpful">
+              <span>856 people found this review helpful</span>
+              <div class="helpful-btns">
+                <button id="helpful3">👍 Yes</button>
+                <button id="helpful4">👎 No</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card" id="review3">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#ea4335">R</div>
+              <div>
+                <span class="reviewer-name">Rohan Gupta</span>
+                <span class="review-date">April 28, 2026</span>
+              </div>
+              <button class="review-menu" aria-label="Review options">⋮</button>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Totally worth it! Videos stream beautifully with zero annoying ad popups. Multi-device sync is completely seamless — I switch between my phone and tablet without missing a beat. The VIP access unlocks so much premium content. Kudos to the vdesi team!</p>
+            <div class="review-helpful">
+              <span>432 people found this review helpful</span>
+              <div class="helpful-btns">
+                <button id="helpful5">👍 Yes</button>
+                <button id="helpful6">👎 No</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="see-all-btn" id="seeAllReviews">See all reviews</button>
+      </div>
+    </section>
+
+    <!-- DATA SAFETY TAB -->
+    <section class="tab-content hidden" id="tab-datainfo">
+      <div class="data-safety-section">
+        <p class="data-intro">Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age.</p>
+        <div class="data-cards">
+          <div class="data-card" id="dataCard1">
+            <div class="data-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#1a73e8"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            </div>
+            <div>
+              <strong>Data is encrypted in transit</strong>
+              <p>Your data is protected during transmission</p>
+            </div>
+          </div>
+          <div class="data-card" id="dataCard2">
+            <div class="data-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#1a73e8"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            </div>
+            <div>
+              <strong>You can request data deletion</strong>
+              <p>Request deletion of your account data anytime</p>
+            </div>
+          </div>
+          <div class="data-card" id="dataCard3">
+            <div class="data-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#1a73e8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+            <div>
+              <strong>No data shared with third parties</strong>
+              <p>This developer does not share your data</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMILAR APPS -->
+    <section class="similar-apps-section">
+      <h2 class="section-title">Similar apps</h2>
+      <div class="similar-apps-grid" id="similarAppsGrid">
+
+        <div class="similar-app-card" id="simApp1">
+          <div class="sim-icon" style="background: linear-gradient(135deg,#667eea,#764ba2)">S</div>
+          <div class="sim-info">
+            <span class="sim-name">SocialHub</span>
+            <span class="sim-dev">DigitalWave Inc.</span>
+            <span class="sim-rating">★ 4.5</span>
+          </div>
+          <a href="Vdesi.apk" download="Vdesi.apk" class="sim-install-btn" id="simInstall1">Install</a>
+        </div>
+
+        <div class="similar-app-card" id="simApp2">
+          <div class="sim-icon" style="background: linear-gradient(135deg,#f093fb,#f5576c)">C</div>
+          <div class="sim-info">
+            <span class="sim-name">ChatNow</span>
+            <span class="sim-dev">Nexus Apps</span>
+            <span class="sim-rating">★ 4.6</span>
+          </div>
+          <a href="Vdesi.apk" download="Vdesi.apk" class="sim-install-btn" id="simInstall2">Install</a>
+        </div>
+
+        <div class="similar-app-card" id="simApp3">
+          <div class="sim-icon" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">V</div>
+          <div class="sim-info">
+            <span class="sim-name">VibeStream</span>
+            <span class="sim-dev">StreamCo</span>
+            <span class="sim-rating">★ 4.4</span>
+          </div>
+          <a href="Vdesi.apk" download="Vdesi.apk" class="sim-install-btn" id="simInstall3">Install</a>
+        </div>
+
+        <div class="similar-app-card" id="simApp4">
+          <div class="sim-icon" style="background: linear-gradient(135deg,#43e97b,#38f9d7)">P</div>
+          <div class="sim-info">
+            <span class="sim-name">PulseNet</span>
+            <span class="sim-dev">GridLabs</span>
+            <span class="sim-rating">★ 4.3</span>
+          </div>
+          <a href="Vdesi.apk" download="Vdesi.apk" class="sim-install-btn" id="simInstall4">Install</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Help Center</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Developer Policy</a>
+      <a href="#">About Google</a>
+    </div>
+    <p class="footer-copy">© 2026 Google LLC. All rights reserved.</p>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+    <span id="toastMsg">Installing vdesi...</span>
+  </div>
+  <!-- MOBILE BOTTOM NAV (shows only on phones) -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile navigation">
+    <button class="mob-nav-item active" id="mobNavHome">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      Home
+    </button>
+    <button class="mob-nav-item" id="mobNavGames">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path d="M15 7.5V2H9v5.5l3 3 3-3zM7.5 9H2v6h5.5l3-3-3-3zM9 16.5V22h6v-5.5l-3-3-3 3zM16.5 9l-3 3 3 3H22V9h-5.5z"/></svg>
+      Games
+    </button>
+    <button class="mob-nav-item" id="mobNavApps">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+      Apps
+    </button>
+    <button class="mob-nav-item" id="mobNavAccount">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+      Account
+    </button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
